@@ -26,9 +26,9 @@ class BlogPostsPortlet < Portlet
       finder = BlogPost
     end
 
-    if @options[:tags].is_a?(Array) && @options[:tags].size > 1
-      other_tags = @options[:tags][1..-1]
-      @options[:tags] = @options[:tags][0]
+    if @options[:tag].is_a?(Array) && @options[:tag].size > 1
+      other_tags = @options[:tag][1..-1]
+      @options[:tag] = @options[:tag][0]
     end
 
     finder = finder.published
